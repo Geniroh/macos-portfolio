@@ -1,10 +1,9 @@
 import gsap from "gsap";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Draggable } from "gsap/Draggable";
 
 import { Navbar, Welcome, Dock } from "#components/index";
-import { Resume, Safari, Terminal } from "#windows/index";
+import { Finder, Resume, Safari, Terminal } from "#windows/index";
 
 gsap.registerPlugin(Draggable);
 
@@ -17,6 +16,7 @@ const App = () => {
       <Terminal />
       <Safari />
       <Resume />
+      <Finder />
     </main>
   );
 };

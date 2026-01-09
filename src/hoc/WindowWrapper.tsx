@@ -1,13 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import gsap from "gsap";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Draggable } from "gsap/Draggable";
 import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import React, { useLayoutEffect, useRef, type ComponentType } from "react";
 
-// Higher-order component that wraps any component
 const WindowWrapper = <P extends object>(
   Component: ComponentType<P>,
   windowKey: string
