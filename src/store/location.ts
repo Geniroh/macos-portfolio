@@ -4,7 +4,7 @@ import { immer } from "zustand/middleware/immer";
 import type { Location, LocationChild } from "#constants/constants.types";
 
 interface LocationStore {
-  activeLocation: Location | LocationChild | null;
+  activeLocation: Location | LocationChild;
   setActiveLocation: (location?: Location | LocationChild | null) => void;
   resetActiveLocation: () => void;
 }
@@ -17,6 +17,7 @@ const useLocationStore = create<LocationStore>()(
 
     setActiveLocation: (location = null) =>
       set((state) => {
+        if (!location) return;
         state.activeLocation = location;
       }),
 
